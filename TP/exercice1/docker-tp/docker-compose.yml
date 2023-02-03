@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  php:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: tp_secu
+    image: php:7.3-apache
+    volumes:
+      - ./www:/var/www/html/
+    ports:
+      - 82:80
